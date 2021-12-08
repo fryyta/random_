@@ -1,0 +1,48 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    srand( time( NULL ) );
+    int dmg_1 =(rand() % 500 );
+    int hp_1 =5000;
+    int dmg_01 =(rand()%300)+100;
+    int hp_01 =4000;
+    int odpowiedz;
+    cout << "masz jedną postać i jednego wroga, nie potrafie balansowac więc rip :/"<<endl;
+    cout << "Twoja postać: 0-500 dmg, 5k hp "<< endl;
+    cout << "Twój wróg: 100-400 dmg, 4k hp" << endl;
+    cout <<"chcesz walczyć czy wyjść z gry? odpowiedz tak(1)/nie(2)"<<endl;
+    cin >> odpowiedz;
+    if (odpowiedz= 1){
+        do{
+            cout<<"twoja tura"<<endl;
+            dmg_1 =(rand() % 500 );
+            hp_01=hp_01 - dmg_1;
+            cout<<hp_01<<" hp wroga"<<endl;
+            cout<<"tura wroga"<<endl;
+            dmg_01 =(rand()%300)+100;
+            hp_1=hp_1-dmg_01;
+            cout<<hp_1<<" twoje hp"<<endl;
+            
+            
+            
+        }while(hp_1>0 && hp_01>0);
+        
+        if(hp_01 = 0){
+            cout<<"wygrałeś"<<endl;
+        }else if (hp_1 < 0{
+            cout<<"przegrałeś"<<endl;
+        }
+        
+    }
+    else if (odpowiedz != 1){
+        cout<<"NIE, będziesz w to grał albo przyjde o północy do twojego domu"<<endl;
+    }
+    
+   
+    return 0;
+}
