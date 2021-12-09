@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    
+    int kalkulator;
+    
+    int a = 10;
+    int b = 59;
+    int *wsk_a;
+    int *wsk_b;
+    
+    
+    wsk_a = & a;
+    wsk_b = & b;
+    
+    cout<<"podaj a"<<endl;
+    
+    
+    
+    
+    
+    
+    cout<<"1-dodawanie, 2-odejmowanie, 3-mnożenie, 4-dzielenie"<<endl;
+    switch(kalkulator){
+        
+        case 1:
+        
+        int dodawanie= *wsk_a + *wsk_b
+        
+        break;
+        
+        case 2:
+        
+        break;
+        
+        case 3:
+        
+        break;
+        
+        case 4:
+        
+        break;
+        
+        
+        
+    }
+    
