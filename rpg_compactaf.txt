@@ -8,9 +8,98 @@ int main()
 {
     srand(time(NULL));
     int dmg_1 = (rand() % 500);
-    int hp_1 = 5000;
-    int dmg_01 = (rand() % 300) + 100;
-    int hp_01 = 4000;
+    int hp_1 = 10000;
+    int skill_1 = dmg_1 * 0.2;
+    
+    int dmg_2 = (rand()%1000);
+    int hp_2 = 6000;
+    
+    
+    int dmg_3 = 750;
+    int hp_3 = 7500;
+    
+    
+    int dmg_4 = 350;
+    int hp_4 = 13000; 
+    int skill_4 = 200;
+    
+    int dmg_5 = 1;
+    int hp_5 = 1;
+    int skill_5 = 69420;
+    
+    //twoje postacie na górze
+    int dmg_01 = 150;
+    int hp_01 = 2000;
+    
+    int dmg_02 = 300;
+    int hp_02 = 1200;
+    
+    int dmg_03 = 100;
+    int hp_03 = 4000;
+    
+    int dmg_04 = 80;
+    int hp_04 = 5500;
+    
+    int dmg_05 = (rand() % 300) + 100;
+    int hp_05 = 4000;
+    
+    int dmg_06 = (rand() % 250) + 250;
+    int hp_06 = 50000;
+    
+    
+    cout << "wybierz postać : 1, 2, 3, 4, 5, " << endl;
+    cin >> postac;
+    switch(postac){
+        case 0:
+        
+        break;
+        
+        case 1:
+        
+        break;
+        
+        case 2:
+        
+        break;
+        
+        case 3:
+        
+        break;
+        
+        case 4:
+        
+        break;
+        
+        case 5:
+        
+        break;
+        
+        if (postac <5 %% postac > 0){cout << "źle wybrałeś, spróbuj ponownie" << endl;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    int postac;
     int odpowiedz;
     int skille;
     int itemy;
@@ -18,35 +107,39 @@ int main()
     cout << "masz jedną postać i jednego wroga (zrobie to później switchcase'em teraz jest tylko mechanika ataku)" << endl;
     cout << "Twoja postać: 0-500 dmg, 5k hp " << endl;
     cout << "Twój wróg: 100-400 dmg, 4k hp" << endl;
-    cout << "czy chcesz używać skilli, itemów lub możliwość ucieczki?"<<endl;
-    cout<<"wybierz odpowiednio 1 jak chcesz, 0 jeśli nie chcesz danej opcji"<<endl;
-    cin >> skille;
-    cin >> itemy;
-    cin >> ucieczka;
-    //powyższe 3 nie zrobione jeszcze
+    
     cout << "chcesz walczyć czy wyjść z gry? odpowiedz walczysz(1), wychodzisz(2)" << endl;
     cin >> odpowiedz;
     if (odpowiedz == 1) {
         do {
             cout << "twoja tura" << endl;
-            dmg_1 = (rand() % 500);
+            cout << "czy chcesz użyć skilla? tak/nie" << endl;
+            cin >> skill_confirm;
+            
             hp_01 = hp_01 - dmg_1;
             cout << hp_01 << " hp wroga" << endl;
             cout << "tura wroga" << endl;
-            dmg_01 = (rand() % 300) + 100;
+            
             hp_1 = hp_1 - dmg_01;
             cout << hp_1 << " twoje hp" << endl;
 
 
+            if (hp_01 < 0) {
+                cout << "wygrałeś" << endl;
+            }
+            else if (hp_1 < 0){
+            cout << "przegrałeś" << endl;
+            }
+
 
         } while (hp_1 > 0 && hp_01 > 0);
 
-        if (hp_01 = 0) {
+        /*if (hp_01 < 0) {
             cout << "wygrałeś" << endl;
         }
         else if (hp_1 < 0){
             cout << "przegrałeś" << endl;
-        }
+        }*/
 
     }
     else if (odpowiedz != 1) {
